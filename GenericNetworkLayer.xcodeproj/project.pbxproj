@@ -15,6 +15,12 @@
 		C30F7EA329E1EDA20001666E /* GenericNetworkLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F7EA229E1EDA20001666E /* GenericNetworkLayerTests.swift */; };
 		C30F7EAD29E1EDA20001666E /* GenericNetworkLayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F7EAC29E1EDA20001666E /* GenericNetworkLayerUITests.swift */; };
 		C30F7EAF29E1EDA20001666E /* GenericNetworkLayerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F7EAE29E1EDA20001666E /* GenericNetworkLayerUITestsLaunchTests.swift */; };
+		C30F7EC129E1EEED0001666E /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F7EC029E1EEED0001666E /* NetworkHelper.swift */; };
+		C30F7EC329E1EEFC0001666E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F7EC229E1EEFC0001666E /* NetworkManager.swift */; };
+		C30F7EC629E1F71F0001666E /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F7EC529E1F71F0001666E /* PostManager.swift */; };
+		C30F7EC829E1FD2B0001666E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F7EC729E1FD2B0001666E /* Post.swift */; };
+		C30F7ECA29E1FE760001666E /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F7EC929E1FE760001666E /* PostViewModel.swift */; };
+		C30F7ECC29E1FFCC0001666E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F7ECB29E1FFCC0001666E /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		C30F7EA829E1EDA20001666E /* GenericNetworkLayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenericNetworkLayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C30F7EAC29E1EDA20001666E /* GenericNetworkLayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericNetworkLayerUITests.swift; sourceTree = "<group>"; };
 		C30F7EAE29E1EDA20001666E /* GenericNetworkLayerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericNetworkLayerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C30F7EC029E1EEED0001666E /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		C30F7EC229E1EEFC0001666E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C30F7EC529E1F71F0001666E /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
+		C30F7EC729E1FD2B0001666E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		C30F7EC929E1FE760001666E /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		C30F7ECB29E1FFCC0001666E /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +109,11 @@
 		C30F7E8A29E1EDA00001666E /* GenericNetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				C30F7E8B29E1EDA00001666E /* AppDelegate.swift */,
-				C30F7E8D29E1EDA00001666E /* SceneDelegate.swift */,
-				C30F7E8F29E1EDA00001666E /* ViewController.swift */,
+				C30F7EBF29E1EEC00001666E /* Utils */,
+				C30F7EBE29E1EEB70001666E /* View */,
+				C30F7EBD29E1EEB10001666E /* ViewModel */,
+				C30F7EBC29E1EEA70001666E /* Model */,
+				C30F7EBB29E1EE8A0001666E /* Core */,
 				C30F7E9429E1EDA20001666E /* Assets.xcassets */,
 				C30F7E9629E1EDA20001666E /* LaunchScreen.storyboard */,
 				C30F7E9929E1EDA20001666E /* Info.plist */,
@@ -122,6 +136,58 @@
 				C30F7EAE29E1EDA20001666E /* GenericNetworkLayerUITestsLaunchTests.swift */,
 			);
 			path = GenericNetworkLayerUITests;
+			sourceTree = "<group>";
+		};
+		C30F7EBB29E1EE8A0001666E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C30F7EC429E1F70B0001666E /* Post */,
+				C30F7EC029E1EEED0001666E /* NetworkHelper.swift */,
+				C30F7EC229E1EEFC0001666E /* NetworkManager.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C30F7EBC29E1EEA70001666E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C30F7EC729E1FD2B0001666E /* Post.swift */,
+				C30F7ECB29E1FFCC0001666E /* Comment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C30F7EBD29E1EEB10001666E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C30F7EC929E1FE760001666E /* PostViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C30F7EBE29E1EEB70001666E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C30F7E8F29E1EDA00001666E /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C30F7EBF29E1EEC00001666E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C30F7E8B29E1EDA00001666E /* AppDelegate.swift */,
+				C30F7E8D29E1EDA00001666E /* SceneDelegate.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C30F7EC429E1F70B0001666E /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				C30F7EC529E1F71F0001666E /* PostManager.swift */,
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +320,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C30F7ECA29E1FE760001666E /* PostViewModel.swift in Sources */,
+				C30F7EC129E1EEED0001666E /* NetworkHelper.swift in Sources */,
 				C30F7E9029E1EDA00001666E /* ViewController.swift in Sources */,
+				C30F7EC329E1EEFC0001666E /* NetworkManager.swift in Sources */,
 				C30F7E8C29E1EDA00001666E /* AppDelegate.swift in Sources */,
 				C30F7E8E29E1EDA00001666E /* SceneDelegate.swift in Sources */,
+				C30F7EC829E1FD2B0001666E /* Post.swift in Sources */,
+				C30F7ECC29E1FFCC0001666E /* Comment.swift in Sources */,
+				C30F7EC629E1F71F0001666E /* PostManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
