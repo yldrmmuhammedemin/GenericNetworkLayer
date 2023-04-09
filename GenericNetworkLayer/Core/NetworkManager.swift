@@ -6,10 +6,16 @@
 //
 
 import Foundation
-class NetworkManager{
-    
-    static let shared = NetworkManager()
-    
+protocol INetworkManager{
+    func request<T:Codable>(type:T.Type,
+                            url: String,
+                            method: HTTPMethods,
+                            completion: @escaping(
+                                (Result<T,ErrorTypes>)->())
+    )
+}
+class NetworkManager:INetworkManager{
+
     func request<T:Codable>(type:T.Type,
                             url: String,
                             method: HTTPMethods,
@@ -36,7 +42,7 @@ class NetworkManager{
         }
     }
     
-    private func handleResponse<T:Codable>(data:Data, completion: @escaping(Result<T, ErrorTypes>) -> ()){
+    func handleResponse<T:Codable>(data:Data, completion: @escaping(Result<T, ErrorTypes>) -> ()){
         do{
             let result = try JSONDecoder().decode(T.self, from: data)
             completion(.success(result))

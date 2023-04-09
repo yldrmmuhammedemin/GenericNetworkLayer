@@ -7,81 +7,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B199CC48-B591-4DE1-8A19-C29B6CF86010"
+            uuid = "34ACD0A6-7052-452F-A9FF-759336C8FC58"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GenericNetworkLayer/View/ViewController.swift"
+            filePath = "GenericNetworkLayer/Core/Post/PostManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "bindData()"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "getPostItems(complete:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AA0087FC-C4B2-4E68-BC91-BC79339DBC84"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GenericNetworkLayer/Core/Post/PostManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getPostItems(complete:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "B199CC48-B591-4DE1-8A19-C29B6CF86010 - 31f09fd27124ef77"
+                  uuid = "AA0087FC-C4B2-4E68-BC91-BC79339DBC84 - 2725b9ed7a481b62"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in GenericNetworkLayer.ViewController.bindData() -&gt; ()"
+                  symbolName = "GenericNetworkLayer.PostManager.getPostItems(complete: (Swift.Optional&lt;Swift.Array&lt;GenericNetworkLayer.Post&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "GenericNetworkLayer"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/r00th/Code/GenericNetworkLayer/GenericNetworkLayer/View/ViewController.swift"
+                  urlString = "file:///Users/r00th/Code/GenericNetworkLayer/GenericNetworkLayer/Core/Post/PostManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "64">
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "384">
                </Location>
                <Location
-                  uuid = "B199CC48-B591-4DE1-8A19-C29B6CF86010 - 31f09fd27124ef77"
+                  uuid = "AA0087FC-C4B2-4E68-BC91-BC79339DBC84 - 49577498faa5c71c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in GenericNetworkLayer.ViewController.bindData() -&gt; ()"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;GenericNetworkLayer.Post&gt;, GenericNetworkLayer.ErrorTypes&gt;) -&gt; () in GenericNetworkLayer.PostManager.getPostItems(complete: (Swift.Optional&lt;Swift.Array&lt;GenericNetworkLayer.Post&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "GenericNetworkLayer"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/r00th/Code/GenericNetworkLayer/GenericNetworkLayer/View/ViewController.swift"
+                  urlString = "file:///Users/r00th/Code/GenericNetworkLayer/GenericNetworkLayer/Core/Post/PostManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "28">
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "100">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9D42344D-2D23-43D9-A6FB-E0555D30E522"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GenericNetworkLayer/ViewModel/PostViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "getPostItems(complete:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B80FE00F-B08B-4306-B66B-205F6C49CBD4"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GenericNetworkLayer/ViewModel/PostViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "getPostItems(complete:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

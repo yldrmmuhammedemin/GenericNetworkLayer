@@ -6,9 +6,14 @@
 //
 
 import UIKit
-
+protocol IViewController{
+    func bindData(values:[Post])
+}
 class ViewController: UIViewController {
-    lazy var postViewModel = PostViewModel()
+    
+    private lazy var posts:[Post] = []
+    
+    lazy var postViewModel:IPostViewModel = PostViewModel()
     
     private let tableView: UITableView = {
         let tableView = UITableView()
@@ -36,7 +41,9 @@ class ViewController: UIViewController {
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
-        bindData()
+        postViewModel.setDelegate(output: self)
+        postViewModel.fetchItems()
+        
     }
     
     private func configureConstraint(){
@@ -56,28 +63,28 @@ class ViewController: UIViewController {
         NSLayoutConstraint.activate(labelConstraint)
     }
     
-    private func bindData(){
-        postViewModel.getPostItems { errorMessage in
-            if let errorMessage = errorMessage{
-                print("error\(errorMessage)")
-            }
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-    }
+
 
 }
 extension ViewController:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return postViewModel.postItems.count
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = postViewModel.postItems[indexPath.row].title
-        cell.detailTextLabel?.text = postViewModel.postItems[indexPath.row].body
+        cell.textLabel?.text =  posts[indexPath.row].title
+        cell.detailTextLabel?.text = posts[indexPath.row].body
         return cell
     }
 
+}
+
+extension ViewController:IViewController{
+    func bindData(values: [Post]) {
+        posts = values
+        tableView.reloadData()
+    }
+    
+    
 }

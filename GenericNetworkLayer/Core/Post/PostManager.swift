@@ -6,12 +6,21 @@
 //
 
 import Foundation
-class PostManager{
-    static let shared = PostManager()
+protocol IPostManager{
+    func getPostItems(complete: @escaping(([Post]?, String?)->()))
+    var networkManager:INetworkManager {get}
+}
+
+class PostManager:IPostManager{
+    var networkManager: INetworkManager
+    
+    init(){
+        networkManager = NetworkManager()
+    }
     
     func getPostItems(complete: @escaping(([Post]?, String?)->())){
         let url = "\(NetworkHelper.shared.baseURL)posts"
-        NetworkManager.shared.request(type: [Post].self, url: url, method: .get) { response in
+        networkManager.request(type: [Post].self, url: url, method: .get) { response in
             switch response{
             case .success(let items):
                 complete(items, nil)
