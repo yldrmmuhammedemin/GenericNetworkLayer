@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     
     private let label : UILabel = {
         let label = UILabel()
-        label.text = "Hello"
+        label.text = "Posts"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
         

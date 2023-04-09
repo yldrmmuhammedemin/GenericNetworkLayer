@@ -20,7 +20,7 @@ class PostManager:IPostManager{
     
     func getPostItems(complete: @escaping(([Post]?, String?)->())){
         let url = "\(NetworkHelper.shared.baseURL)posts"
-        networkManager.request(type: [Post].self, url: url, method: .get) { response in
+        networkManager.alamofireRequest(type: [Post].self, url: url, method: .get) { response in
             switch response{
             case .success(let items):
                 complete(items, nil)

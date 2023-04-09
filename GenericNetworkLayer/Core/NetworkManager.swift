@@ -6,17 +6,28 @@
 //
 
 import Foundation
+import Alamofire
 protocol INetworkManager{
-    func request<T:Codable>(type:T.Type,
+    
+    func urlSessionRequest<T:Codable>(type:T.Type,
                             url: String,
                             method: HTTPMethods,
                             completion: @escaping(
                                 (Result<T,ErrorTypes>)->())
     )
+    
+    func alamofireRequest<T:Codable>(type:T.Type,
+                            url: String,
+                            method: HTTPMethod,
+                            completion: @escaping(
+                                (Result<T,ErrorTypes>)->())
+    )
 }
+
 class NetworkManager:INetworkManager{
 
-    func request<T:Codable>(type:T.Type,
+    
+    func urlSessionRequest<T:Codable>(type:T.Type,
                             url: String,
                             method: HTTPMethods,
                             completion: @escaping(
@@ -42,6 +53,23 @@ class NetworkManager:INetworkManager{
         }
     }
     
+    func alamofireRequest<T:Codable>(type:T.Type,
+                                     url: String,
+                                     method: HTTPMethod,
+                                     completion: @escaping(
+                                        (Result<T,ErrorTypes>)->())
+    ){
+        AF.request(url, method: method).responseData { response in
+            switch response.result{
+            case .success(let data):
+                self.handleResponse(data: data) { response in
+                    completion(response)
+                }
+            case .failure(_):
+                completion(.failure(.generalError))
+            }
+        }
+    }
     func handleResponse<T:Codable>(data:Data, completion: @escaping(Result<T, ErrorTypes>) -> ()){
         do{
             let result = try JSONDecoder().decode(T.self, from: data)

@@ -22,7 +22,7 @@ class NetworkHelper{
     
     let baseURL = "https://jsonplaceholder.typicode.com/"
     
-    let header = ["Auth":"Bearer"]
+    let header = ["Auth":"Bearer "]
     
     func saveToken(token:String){
         
