@@ -18,14 +18,11 @@ enum ErrorTypes:String, Error{
     case generalError = "Error"
 }
 class NetworkHelper{
+    // MARK: - Singleton and URL declaration
     static let shared = NetworkHelper()
     
     let baseURL = "https://jsonplaceholder.typicode.com/"
     
     let header = ["Auth":"Bearer "]
-    
-    func saveToken(token:String){
-        
-    }
     
 }

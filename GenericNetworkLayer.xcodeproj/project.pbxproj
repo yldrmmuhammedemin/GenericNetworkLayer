@@ -20,7 +20,6 @@
 		C30F7EC629E1F71F0001666E /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F7EC529E1F71F0001666E /* PostManager.swift */; };
 		C30F7EC829E1FD2B0001666E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F7EC729E1FD2B0001666E /* Post.swift */; };
 		C30F7ECA29E1FE760001666E /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F7EC929E1FE760001666E /* PostViewModel.swift */; };
-		C30F7ECC29E1FFCC0001666E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F7ECB29E1FFCC0001666E /* Comment.swift */; };
 		C3FEAF9D29E2B7360051CD29 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C3FEAF9C29E2B7360051CD29 /* Alamofire */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +58,6 @@
 		C30F7EC529E1F71F0001666E /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
 		C30F7EC729E1FD2B0001666E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		C30F7EC929E1FE760001666E /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
-		C30F7ECB29E1FFCC0001666E /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				C30F7EC729E1FD2B0001666E /* Post.swift */,
-				C30F7ECB29E1FFCC0001666E /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,7 +332,6 @@
 				C30F7E8C29E1EDA00001666E /* AppDelegate.swift in Sources */,
 				C30F7E8E29E1EDA00001666E /* SceneDelegate.swift in Sources */,
 				C30F7EC829E1FD2B0001666E /* Post.swift in Sources */,
-				C30F7ECC29E1FFCC0001666E /* Comment.swift in Sources */,
 				C30F7EC629E1F71F0001666E /* PostManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

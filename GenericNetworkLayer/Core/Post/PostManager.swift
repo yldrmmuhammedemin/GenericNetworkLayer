@@ -12,12 +12,13 @@ protocol IPostManager{
 }
 
 class PostManager:IPostManager{
+    // MARK: - Variables
     var networkManager: INetworkManager
     
     init(){
         networkManager = NetworkManager()
     }
-    
+    // MARK: - Getting items from network manager 
     func getPostItems(complete: @escaping(([Post]?, String?)->())){
         let url = "\(NetworkHelper.shared.baseURL)posts"
         networkManager.alamofireRequest(type: [Post].self, url: url, method: .get) { response in

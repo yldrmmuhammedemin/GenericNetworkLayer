@@ -26,7 +26,7 @@ protocol INetworkManager{
 
 class NetworkManager:INetworkManager{
 
-    
+    // MARK: - URLSession library request function
     func urlSessionRequest<T:Codable>(type:T.Type,
                             url: String,
                             method: HTTPMethods,
@@ -52,7 +52,7 @@ class NetworkManager:INetworkManager{
             dataTask.resume()
         }
     }
-    
+    // MARK: - Alamofire library request function
     func alamofireRequest<T:Codable>(type:T.Type,
                                      url: String,
                                      method: HTTPMethod,
@@ -70,6 +70,8 @@ class NetworkManager:INetworkManager{
             }
         }
     }
+    
+    // MARK: - Handle to response function
     func handleResponse<T:Codable>(data:Data, completion: @escaping(Result<T, ErrorTypes>) -> ()){
         do{
             let result = try JSONDecoder().decode(T.self, from: data)

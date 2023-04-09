@@ -16,6 +16,18 @@ protocol IPostViewModel{
 }
 
 class PostViewModel:IPostViewModel{
+    // MARK: - Variables
+    var postManager: IPostManager
+    
+    init(){
+        postManager = PostManager()
+    }
+    
+    var postItems = [Post]()
+    
+    var viewController: IViewController?
+    
+    // MARK: - Fetch items from PostManager Protocol
     func fetchItems() {
             postManager.getPostItems { items, errorMessage in
                 if let items = items {
@@ -24,21 +36,11 @@ class PostViewModel:IPostViewModel{
                 }
             }
     }
-    
-    var viewController: IViewController?
-    
+    // MARK: - Setting delegate function for ViewController
     func setDelegate(output: IViewController) {
         viewController = output
     }
     
-    var postManager: IPostManager
-    
-    init(){
-        postManager = PostManager()
-    }
-    
-    var postId = 0
-    var postItems = [Post]()
-    var commentItems = [Comment]()
+ 
     
 }

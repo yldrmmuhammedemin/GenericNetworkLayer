@@ -11,6 +11,7 @@ protocol IViewController{
 }
 class ViewController: UIViewController {
     
+    // MARK: - Variables and componenets
     private lazy var posts:[Post] = []
     
     lazy var postViewModel:IPostViewModel = PostViewModel()
@@ -28,7 +29,7 @@ class ViewController: UIViewController {
         return label
         
     }()
-    
+    // MARK: - Lifecycle function
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -36,6 +37,7 @@ class ViewController: UIViewController {
         configureConstraint()
     }
     
+    // MARK: - Configure function
     private func configure(){
         view.addSubview(label)
         view.addSubview(tableView)
@@ -66,6 +68,7 @@ class ViewController: UIViewController {
 
 
 }
+// MARK: - Table view stub functions
 extension ViewController:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
@@ -79,7 +82,7 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource{
     }
 
 }
-
+// MARK: - Protocol function declaration / Setting items to table
 extension ViewController:IViewController{
     func bindData(values: [Post]) {
         posts = values
